@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Comparison</title>
+    <style>
+        body {
+            height: 120vh;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            height: 90%;
+            width: 90%;
+            padding: 20px;
+            box-shadow: 0 0 10px 2px;
+        }
+
+        .section {
+            height: 10%;
+            width: 100%;
+        }
+
+        .section2 {
+            height: 100%;
+            width: 5%;
+
+        }
+
+        .bigsection {
+            height: 70%;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .part {
+            height: 100%;
+            width: 50%;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .grid {
+            display: grid;
+            height: 100%;
+            width: 90%;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1ft);
+            box-sizing: border-box;
+        }
+
+        svg {
+            height: 50%;
+            margin-right: 10px;
+            margin-top: 12px;
+        }
+
+        .icon {
+            display: flex;
+            height: 100%;
+            margin-right: 20px;
+            margin-left: 10px;
+        }
+
+        .icontext {
+            font-weight: bolder;
+        }
+
+        .circle {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+        }
+
+        .item {
+            border: 1px solid gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .no-margin {
+            margin: 0;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .grey {
+            background-color: lightgray;
+        }
+
+        .greenbackground {
+            background-color: lightgreen;
+        }
+
+        #left {
+            text-align: end;
+        }
+        @media(max-width: 680px) {
+            svg {
+                height: 25%;
+            }
+
+            p {
+                font-size: 10px;
+            }
+
+            .icon {
+                text-align: start;
+            }
+
+        }
+    </style>
+</head>
+<body class="flex column" id="left">
+    <h1>Flight Insights</h1>
+    <div class="main">
+       <div class="section flex">
+          <div class="part flex" style="justify-content: flex-start;">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 9H21M9 15L11 17L15 13M7 3V5M17 3V5M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+              <p class="icontext">Dates</p>
+            </div>
+            <div class="icon">
+              <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <rect y="162.2" width="117.8" height="327.8"></rect> <rect x="186.3" width="117.8" height="490"></rect> <rect x="372.2" y="82.4" width="117.8" height="407.6"></rect> </g> </g> </g></svg>
+              <p class="icontext">Price Graph</p>
+            </div>
+            <div class="icon">
+              <svg fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>plane</title> <path d="M15.521 3.91c0.828 0 1.5 0.672 1.5 1.5v7.75l10 6.25v2.688l-10-3.375v5.25l2.039 2.029-0.001 2.084-3.538-1.176-3.487 1.18 0.015-2.189 1.91-1.865 0.017-5.312-9.997 3.436 0.021-2.75 10.007-6.313 0.016-7.688c-0.002-0.827 0.67-1.499 1.498-1.499z"></path> </g></svg>
+              <p class="icontext">Airports</p>
+            </div>
+            <div class="icon">
+              <svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8.5 0c-3.032 0-5.5 2.617-5.5 5.833 0 2.354 0.964 3.67 1.814 4.831 0.637 0.868 1.186 1.618 1.186 2.673v2.096c0 0.864 0.673 1.567 1.5 1.567h2c0.827 0 1.5-0.703 1.5-1.567v-2.126c0-1.045 0.517-1.735 1.17-2.609 0.815-1.091 1.83-2.447 1.83-4.865 0-3.216-2.468-5.833-5.5-5.833zM9.5 16h-2c-0.275 0-0.5-0.254-0.5-0.567v-1.633h3v1.633c0 0.313-0.225 0.567-0.5 0.567zM11.369 10.099c-0.587 0.785-1.19 1.593-1.336 2.701h-3.072c-0.152-1.102-0.754-1.927-1.34-2.727-0.797-1.088-1.621-2.213-1.621-4.24 0-2.665 2.019-4.833 4.5-4.833s4.5 2.168 4.5 4.833c0 2.085-0.829 3.194-1.631 4.266z" fill="#000000"></path> </g></svg>
+              <p class="icontext">Tips</p>
+            </div>
+          </div>
+          <div class="part flex" style="justify-content: flex-end; align-items: flex-start;">
+            <svg style="margin: 0;" fill="#000000"  version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460.775 460.775" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"></path> </g></svg>
+          </div>
+       </div>
+       <div class="section flex">
+        <div class="part flex" style="justify-content: flex-start; padding-left: 20px;">
+            <p style="margin-top: 25px;">Departure</p>
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.2893 5.70708C13.8988 5.31655 13.2657 5.31655 12.8751 5.70708L7.98768 10.5993C7.20729 11.3805 7.2076 12.6463 7.98837 13.427L12.8787 18.3174C13.2693 18.7079 13.9024 18.7079 14.293 18.3174C14.6835 17.9269 14.6835 17.2937 14.293 16.9032L10.1073 12.7175C9.71678 12.327 9.71678 11.6939 10.1073 11.3033L14.2893 7.12129C14.6799 6.73077 14.6799 6.0976 14.2893 5.70708Z" fill="#0F0F0F"></path> </g></svg>
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#0F0F0F"></path> </g></svg>
+        </div>
+        <div class="part flex" style="flex-direction: column;">
+            <div class="icon flex" style="height: 25%;">
+                <div class="icon flex">
+                <div class="circle" style="background-color: green;">
+                </div>
+                <p style="margin-left: 5px;" class="icontext">Cheaper</p>
+            </div>
+            <div class="icon flex">
+                <div class="circle" style="background-color: red;">
+
+                </div>
+                <p style="margin-left: 5px;" class="icontext">More Expensive</p>
+            </div>
+           </div>
+            <p>Compared with other prices shown</p>
+        </div>
+       </div>
+       <div class="bigsection flex">
+          <div class="grid">
+            <div class="item column grey">
+                <p class="no-margin">Mon</p>
+                <p class="no-margin">Jan 14</p>
+             </div>
+             <div class="item column grey">
+                <p class="no-margin">Tue</p>
+                <p class="no-margin">Jan 15</p>
+             </div>
+             <div class="item column grey">
+                <p class="no-margin">Wed</p>
+                <p class="no-margin">Jan 16</p>
+             </div>
+             <div class="item column grey">
+                <p class="no-margin">Thu</p>
+                <p class="no-margin">Jan 17</p>
+             </div>
+             <div class="item column grey">
+                <p class="no-margin">Fri</p>
+                <p class="no-margin">Jan 18</p>
+             </div>
+             <div class="item column grey">
+                <p class="no-margin">Sat</p>
+                <p class="no-margin">Jan 19</p>
+             </div>
+             <div class="item column grey">
+                <p class="no-margin">Sun</p>
+                <p class="no-margin">Jan 20</p>
+             </div>
+             <div class="item column">
+             </div>
+              <div class="item red">
+                <p>$689</p>
+             </div>
+             <div class="item red">
+                <p>$689</p>
+             </div>
+             <div class="item red">
+                <p>$689</p>
+             </div>
+             <div class="item green">
+                <p>$680</p>
+             </div>
+             <div class="item red">
+                <p>$689</p>
+             </div>
+             <div class="item green">
+                <p>$680</p>
+             </div>
+             <div class="item red">
+                <p>$689</p>
+             </div>
+             <div class="item column grey">
+                <p class="no-margin">Mon</p>
+                <p class="no-margin">Jan 28</p>
+             </div>
+             <div class="item red">
+                <p>$689</p>
+             </div>
+             <div class="item red">
+                <p>$689</p>
+             </div>
+             <div class="item red">
+                <p>$689</p>
+             </div>
+             <div class="item red" >
+                <p>$689</p>
+             </div>
+             <div class="item red">
+                <p>$689</p>
+             </div>
+             <div class="item red">
+                <p>$689</p>
+             </div>
+             <div class="item green greenbackground">
+                <p>$679</p>
+             </div>
+             
+             <div class="item column grey">
+                <p class="no-margin">Mon</p>
+                <p class="no-margin">Jan 28</p>
+             </div>
+             <div class="item red">
+                <p>$689</p>
+             </div>
+             <div class="item red">
+                <p>$689</p>
+             </div>
+             <div class="item red">
+                <p>$689</p>
+             </div>
+             <div class="item red">
+                <p>$689</p>
+             </div>
+             <div class="item red" >
+                <p>$689</p>
+             </div>
+             <div class="item green">
+                <p>$680</p>
+             </div>
+             <div class="item red">
+                <p>$689</p>
+             </div>
+             <div class="item column grey">
+                <p class="no-margin">Mon</p>
+                <p class="no-margin">Jan 28</p>
+          </div>
+          <div class="item green greenbackground">
+            <p>$679</p>
+         </div>
+         <div class="item red">
+            <p>$689</p>
+         </div>
+         <div class="item red">
+            <p>$689</p>
+         </div>
+         <div class="item red" style="background-color: blue;">
+            <p style="color: white;">$689</p>
+         </div>
+         <div class="item green greenbackground">
+            <p>$679</p>
+         </div>
+         <div class="item red">
+            <p>$689</p>
+         </div>
+         <div class="item green greenbackground">
+            <p>$679</p>
+         </div>
+         <div class="item column grey">
+            <p class="no-margin">Mon</p>
+            <p class="no-margin">Jan 28</p>
+          </div>
+          <div class="item red">
+            <p>$689</p>
+         </div>
+         <div class="item green greenbackground">
+            <p>$679</p>
+         </div>
+         <div class="item red">
+            <p>$689</p>
+         </div>
+         <div class="item red">
+            <p>$689</p>
+         </div>
+         <div class="item red">
+            <p>$689</p>
+         </div>
+         <div class="item red">
+            <p>$689</p>
+         </div>
+         <div class="item red" >
+            <p>$689</p>
+         </div>
+         <div class="item column grey">
+            <p class="no-margin">Mon</p>
+            <p class="no-margin">Jan 28</p>
+      </div>
+      <div class="item green greenbackground">
+        <p>$679</p>
+     </div>
+     <div class="item green greenbackground">
+        <p>$679</p>
+     </div>
+     <div class="item green greenbackground">
+        <p>$679</p>
+     </div>
+     <div class="item green">
+        <p>$680</p>
+     </div>
+     <div class="item green greenbackground">
+        <p>$679</p>
+     </div>
+     <div class="item green greenbackground">
+        <p>$679</p>
+     </div>
+     <div class="item green greenbackground">
+        <p>$679</p>
+     </div>
+     <div class="item column grey">
+        <p class="no-margin">Mon</p>
+        <p class="no-margin">Jan 28</p>
+      </div>
+      <div class="item red">
+        <p>$689</p>
+     </div>
+     <div class="item green greenbackground">
+        <p>$679</p>
+     </div>
+     <div class="item red">
+        <p>$689</p>
+     </div>
+     <div class="item red">
+        <p>$689</p>
+     </div>
+     <div class="item red">
+        <p>$689</p>
+     </div>
+     <div class="item red">
+        <p>$689</p>
+     </div>
+     <div class="item green">
+        <p>$680</p>
+     </div>
+     <div class="item column grey">
+        <p class="no-margin">Mon</p>
+        <p class="no-margin">Jan 28</p>
+     </div>
+     </div>
+          <div class="section2 flex column" style="justify-content: flex-start;">
+            <p style="margin-top: 25px; writing-mode: vertical-lr;">Departure</p>
+            <svg class="no-margin;" style="height: 25px; margin-left: 5px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5.70711 16.1359C5.31659 16.5264 5.31659 17.1596 5.70711 17.5501L10.5993 22.4375C11.3805 23.2179 12.6463 23.2176 13.4271 22.4369L18.3174 17.5465C18.708 17.156 18.708 16.5228 18.3174 16.1323C17.9269 15.7418 17.2937 15.7418 16.9032 16.1323L12.7176 20.3179C12.3271 20.7085 11.6939 20.7085 11.3034 20.3179L7.12132 16.1359C6.7308 15.7454 6.09763 15.7454 5.70711 16.1359Z" fill="#0F0F0F"></path> <path d="M18.3174 7.88675C18.708 7.49623 18.708 6.86307 18.3174 6.47254L13.4252 1.58509C12.644 0.804698 11.3783 0.805008 10.5975 1.58579L5.70711 6.47615C5.31658 6.86667 5.31658 7.49984 5.70711 7.89036C6.09763 8.28089 6.7308 8.28089 7.12132 7.89036L11.307 3.70472C11.6975 3.31419 12.3307 3.31419 12.7212 3.70472L16.9032 7.88675C17.2937 8.27728 17.9269 8.27728 18.3174 7.88675Z" fill="#0F0F0F"></path> </g></svg>
+          </div>
+       </div>
+    </div>
+</body>
+</html>
